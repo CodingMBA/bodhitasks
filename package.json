@@ -1,0 +1,40 @@
+{
+  "name": "bodhi-tasks",
+  "version": "0.0.1",
+  "description": "Quasar framework app built on top of Vue.js with Vuex and Firebase.",
+  "productName": "Bodhi Tasks",
+  "cordovaId": "org.cordova.quasar.app",
+  "author": "Andrew Smith <codingmba@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "build:pwa": "quasar build -m pwa",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "quasar": "^1.0.0"
+  },
+  "devDependencies": {
+    "@quasar/app": "^1.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-loader": "^3.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-vue": "^5.2.3",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.18.2",
+    "prettier-eslint": "^9.0.0",
+    "sass-loader": "^8.0.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ]
+}
