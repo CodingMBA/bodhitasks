@@ -20,16 +20,16 @@
     <q-item-section v-if="task.dueDate" side>
       <div class="row">
         <div class="column justify-center">
-          <q-icon name="event" size="18px" class="q-mr-xs" />
+          <q-icon name="event" size="18px" class="q-mr-sm" />
         </div>
         <div class="column">
-          <q-item-label class="row justify-end" caption>{{
-            task.dueDate | niceDate
-          }}</q-item-label>
+          <q-item-label class="row justify-end" caption>
+            {{ task.dueDate | niceDate }}
+          </q-item-label>
           <small>
-            <q-item-label class="row justify-end" caption>{{
-              taskDueTime
-            }}</q-item-label>
+            <q-item-label class="row justify-end" caption>
+              {{ taskDueTime }}
+            </q-item-label>
           </small>
         </div>
       </div>

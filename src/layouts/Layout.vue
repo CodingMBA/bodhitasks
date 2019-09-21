@@ -3,6 +3,22 @@
     <q-header elevated>
       <q-toolbar>
         <q-toolbar-title class="absolute-center">Bodhi Tasks</q-toolbar-title>
+        <q-btn
+          v-if="!loggedIn"
+          to="/auth"
+          flat
+          icon-right="account_circle"
+          label="Login"
+          class="absolute-right"
+        />
+        <q-btn
+          v-else
+          flat
+          icon-right="account_circle"
+          label="Logout"
+          class="absolute-right"
+          @click="logoutUser"
+        />
       </q-toolbar>
     </q-header>
 
@@ -46,13 +62,17 @@
       </q-list>
     </q-drawer>
 
-    <q-page-container>
+    <q-page-container
+      container
+      style="height: 100vh; width: 90vw; margin-left: auto; margin-right: auto"
+    >
       <router-view />
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
+import { mapActions, mapState } from "vuex";
 import { openURL } from "quasar";
 
 export default {
@@ -75,7 +95,11 @@ export default {
     };
   },
   methods: {
+    ...mapActions("auth", ["logoutUser"]),
     openURL
+  },
+  computed: {
+    ...mapState("auth", ["loggedIn"])
   }
 };
 </script>

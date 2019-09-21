@@ -5,7 +5,7 @@ module.exports = function(ctx) {
   return {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
-    boot: [],
+    boot: ["firebase", "router-auth"],
 
     css: ["app.styl"],
 
@@ -60,7 +60,10 @@ module.exports = function(ctx) {
         "QBanner",
         "QSelect",
         "QScrollArea",
-        "QToggle"
+        "QToggle",
+        "QTabPanels",
+        "QTabPanel",
+        "QSeparator"
       ],
 
       directives: ["Ripple", "ClosePopup", "TouchHold"],
