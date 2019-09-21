@@ -47,9 +47,11 @@ const actions = {
         // User is signed in.
         commit("setLoggedIn", true);
         LocalStorage.set("loggedIn", true);
-        this.$router.push("/");
+        this.$router.push("/").catch(err => {});
         dispatch("tasks/fbReadData", null, { root: true });
       } else {
+        commit("tasks/clearTasks", null, { root: true });
+        commit("tasks/setTasksDownloaded", false, { root: true });
         commit("setLoggedIn", false);
         LocalStorage.set("loggedIn", false);
         this.$router.replace("/auth");
