@@ -14,7 +14,11 @@
             transition-show="scale"
             transition-hide="scale"
           >
-            <q-date :value="dueDate" @input="$emit('update:dueDate', $event)" />
+            <q-date
+              :value="dueDate"
+              today-btn
+              @input="$emit('update:dueDate', $event)"
+            />
           </q-popup-proxy>
         </q-icon>
       </template>
